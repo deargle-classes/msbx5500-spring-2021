@@ -1,1 +1,5 @@
-theme: jekyll-theme-minimal
+title: MSBX 5500 - Spring 2021
+description: Class content for MSBX 5500 Spring 2021
+
+theme: jekyll-theme-time-machine
+show_downloads: false
