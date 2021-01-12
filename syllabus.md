@@ -46,66 +46,40 @@ Students in the security analytics track of the MSBA pass both prerequistes. MBA
 
 # Learning Outcomes
 
-Since this is a capstone course for y'all Security Analytics track MSBA students, I have both class-specific and track-specific learning outcomes. I will try to map assignments to these learning outcomes.
+Some of the learning outcomes below are actually target program outcomes a security analytics student.
+As such, while we won't necessarily hit all of these in this class, each assignment should touch on at least some of these.
 
-## Class-specific
-
-[//]: # I need to convert these to use [learning outcomes verbs](http://ccc.clinton.edu/CurriculumCommittee/ListofMeasurableVerbs.cxml)
-
-Basics on collaborative and open-source coding
+Use collaborative and open-source coding practices
 : Includes:
   * Git and github
-  * sharing read-only Jekyll notebooks on github
+  * Sharing read-only Jekyll notebooks on github
   * Markdown language
-
-Example with malware analysis kaggle winner of multinomial prediction of malware
-: Includes:
-* Multinomial classification
-* example of winners getting domain knowledge by reading academic papers and extracting methods
-
-Deep learning exposure
-: Neural nets, Dan Becker
 
 Continuous self-education
 : Includes:
-  * Learn to read python documentation and source code using sklearn
-  * Learn about cutting-edge ML technologies using wikipedia rabbit hole
+  * Problem-solve by reading and using python library documentation and source code
+  * Use open tools such as wikipedia to learn cutting-edge ML techniques and concepts
+  * Obtain domain-specific ML knowledge by reading academic papers and extracting methods
 
-CRISP-DM Predictive machine learning -- fill gaps in whatever they don't already understand from other classes
+Apply CRISP-DM to security analytics contexts
+: Includes
+  * explain examples unsupervised and supervised business problems in security analytics domains
+  * _comfortably_ discuss fundamentals of the entire CRISP-DM process
+
+
+Report analytics results
 : Includes:
-  * model induction
-    * with a focus on "how do the models make predictions"
-  * model evaluation
-    * using python sklearn and also datarobot
-    * cross-nested validation
-    * confusion matrices, ROC curves, precision-recall curves, lift curves
-  * feature importances
-    * using python sklearn and also datarobot
+  * write a full CRISP-DM report and publish it in an open format
+  * recommend a model based on evaluation scores
+  * report feature importances, written for a managerial audience.
 
-Unsupervised learning with example of network traffic and user anomaly behavior
-: example datasets:
-
-  * MTU-13 labeled botnet traffic
-  * sherlock mobile malware analysis project
-  * kaggle malware competition
-
-Deployment of models with python
+Demonstrate and explain deployment of models with python
 : Includes:
   * choosing a cutoff threshold -- automating using optimization of F1 (and why)
   * python-"Pickling" a model
     * sklearn pipelines for easy replicability
-  * aws api ml endpoint
-  * Docker, heroku, binder
-
-Communicating results
-: Writing a full crisp-dm report and publishing it, recommend a model based on evaluation scores, report feature importances, written for a managerial audience. Github deliverable, team-based.
-
-
-## Track-specific
-
-* Have a web portfolio of projects from the program
-* Have a resume and apply to jobs
-
+  * Cloud deployment, such as AWS API ML endpoint
+  * Explain and use tools such as Docker, Heroku, and Mybinder
 
 
 ## Communication
