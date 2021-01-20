@@ -89,3 +89,7 @@ Also, remind me that I still need to give you a shot at the malware lab.
   of a security domain example with a continuous dependent variable as opposed to a categorical one, but I couldn't think of one. Next class, I'll try again with a categorical
   example, discussing probability predictions. I'll try to bring you through model evaluation
   (confusion matrices).
+
+  Update 1-20-2020: Here are two figures that illustrate what I was getting at with how models make predictions. Right-click > "Open image in new tab" to make it bigger. 
+
+  ![how-models-make-predictions-continuous-threat-score]({{ '/assets/images/how-models-make-predictions-continuous-threat-score.png' | relative_url }})
