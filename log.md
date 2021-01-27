@@ -1,5 +1,8 @@
 ---
+title: Class Log
 ---
+
+# Class Log
 
 # 1-13-2020
 
