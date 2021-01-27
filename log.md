@@ -90,6 +90,93 @@ Also, remind me that I still need to give you a shot at the malware lab.
   example, discussing probability predictions. I'll try to bring you through model evaluation
   (confusion matrices).
 
-  Update 1-20-2020: Here are two figures that illustrate what I was getting at with how models make predictions. Right-click > "Open image in new tab" to make it bigger. 
+  Update 1-20-2020: Here are two figures that illustrate what I was getting at with how models make predictions. Right-click > "Open image in new tab" to make it bigger.
 
   ![how-models-make-predictions-continuous-threat-score]({{ '/assets/images/how-models-make-predictions-continuous-threat-score.png' | relative_url }})
+
+
+# 1-26-2020
+
+During last week, I wrote some more verbose guides about how to build your GitHub Pages sites locally,
+and on how to get started with blogging on your GitHub Pages sites. Both added as supplements [to the bottom of the
+relevant lab doc](https://classes.daveeargle.com/security-analytics-assignments/labs/lab-github-and-github-pages.html#supplemental).
+I also spent an inordinate amount of time getting the table of contents on the left to work. _Remember, web dev is addicting!_
+
+[Whiteboard link to class session](https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtLzg2ZDg2YzE5ZWIyZTQ4NDhiNTRiNTU3OGZhZDg5MzM5X0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRA==)
+
+Today in class, we discussed the following:
+
+## Why Docker for scipy, pyspark, in your Unstructured Data Analysis class?
+
+Because pyspark is nigh impossible to compile on Windows, and precompiled binaries that match
+your specific operating system are a horrible pain to integrate into Anaconda.
+
+## Why you're taking the cyber security networking class
+
+[For your health](https://www.youtube.com/watch?v=wIaPvWWQli0). I know the topic is generally overwhelming, but if you had a chance to take a class
+from Aristotle, would you take it, in hopes of gleaning _some_ knowledge? Of course!
+
+## HinDom and Unit of analysis
+
+We reviewed the [HinDom](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C6&q=HinDom%3A+A+Robust+Malicious+Domain+Detection+System+based+on+Heterogeneous+Information+Network+with+Transductive+Classification&btnG=) paper that was assigned reading for your network security analytics class.
+
+Discussed the concept of _unit of analysis_ -- how the "business question" drives this. We feed _1_ unit into our predictive models,
+and _1_ prediction comes out. So if our raw data has more than 1 row per thing that we want a prediction for, we have to
+_reshape the data_. Techniques for this include _grouping_ the data.
+
+Or if the data is horribly violative of normalcy, it is often
+far better to split the dataframe out into several smaller dataframes, and then to re-join those dataframes. This procedure, in effect,
+_gathers_ the data, making multiple columns where there used to be multiple rows.
+
+We used the example of moving from pcaps (one row per connection-packet) to netflows (one row per connection-timewindow)
+to making predictions about whether an IP is a member of a botnet (one row per IP address).
+
+In HinDom, by contrast, the unit of analysis is a _domain name_. Recall that a domain name can only be associated with
+one IP address (ignoring load balancing systems), but that multiple IP addresses can be associated with a single domain
+name.
+
+HimDom is throws shade for days at domain-name-detection approaches that use static feature selection.
+It uses some cool networking-based approaches to use _unlabeled_ data in combination with _labeled_
+malicious-benign domains in order to better make domain predictions.
+
+## Finding academic papers
+
+One of the easiest ways is to paste the paper title into <https://scholar.google.com>.
+
+## Getting help on your own
+
+A student asked a question about usage of a `RandomForestRegressor` which had been used in one of the kaggle-learn lessons.
+We collectively explored how to get help:
+
+* we begun by google-searching the `from ... import` line found at the top of the snippet. First hit was to the docs
+* We looked at the docs for a bit, and noticed the `source` link towards the top. We observed that the docs were dynamically
+  built from comment blocks within the source code.
+* we discussed how documentation can _lie_, that is, can be _wrong_. But how the source code itself _cannot lie_. I made passing
+  reference to attaching debuggers to the source code, and said that following through functions that I am confused about
+  is one of the primary ways that I learn new programming languages.
+* we looked at how documentation lists datatypes, return values, etc.
+
+## Random Seeds in data analytics
+
+We linked the use of the `random_state` argument to sklearn functions back to learning about PNRG in the info security class.
+We demonstrated that the most appropriate random_state value is always `42`. That the predominant use of random states is to meet
+the _replicable_ goal of open data science.
+
+## Structuring reports
+
+I showed you my draft [CRISP-DM report structure](https://classes.daveeargle.com/security-analytics-assignments/crisp-dm-report-format), which can be used for analyses of all lengths.
+
+## Python ML practice
+
+I showed you my draft collection of [security-related datasets](https://classes.daveeargle.com/security-analytics-assignments/datasets).
+In class, I tasked you with starting a simple CRISP-DM-structured analysis using what you'd seen in the [kaggle-learn](https://www.kaggle.com/learn/overview) courses.
+
+I had you try to figure out how to use the `fetch_openml` function in sklearn to load the [Credit Card Fraud dataset](https://classes.daveeargle.com/security-analytics-assignments/datasets#credit-card-fraud).
+We had fun.
+
+## Coming up next
+
+I have assigned you a few more kaggle-learn python lessons to complete, and also a few more textbook chapter exams to complete.
+I will also have you convert one of your assignments from last semester into a portfolio piece.
+
+See you soon!
