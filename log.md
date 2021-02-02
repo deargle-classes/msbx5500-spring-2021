@@ -138,7 +138,7 @@ In HinDom, by contrast, the unit of analysis is a _domain name_. Recall that a d
 one IP address (ignoring load balancing systems), but that multiple IP addresses can be associated with a single domain
 name.
 
-HimDom is throws shade for days at domain-name-detection approaches that use static feature selection.
+HinDom throws shade for days at domain-name-detection approaches that use static feature selection.
 It uses some cool networking-based approaches to use _unlabeled_ data in combination with _labeled_
 malicious-benign domains in order to better make domain predictions.
 
@@ -176,6 +176,12 @@ In class, I tasked you with starting a simple CRISP-DM-structured analysis using
 
 I had you try to figure out how to use the `fetch_openml` function in sklearn to load the [Credit Card Fraud dataset](https://classes.daveeargle.com/security-analytics-assignments/datasets#credit-card-fraud).
 We had fun.
+
+## Why Docker?
+
+We also talked about why other classes would be requiring that students install DockerHub in order to run jupyter notebooks.
+Students were not aware of the horrors of compiling certain python libraries such as, IIRC, hadoop. Docker gives a perfectly-predictable
+system environment in which to run packages. 
 
 ## Coming up next
 
