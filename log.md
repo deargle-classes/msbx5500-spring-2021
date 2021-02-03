@@ -4,7 +4,7 @@ title: Class Log
 
 # Class Log
 
-# 1-13-2020
+# 1-13-2021
 
 Run, don't walk. We need to get you caught up with some fundamentals. I'm assigning
 you some introductory python lessons, using Kaggle Learn's free courses.
@@ -98,7 +98,7 @@ Also, remind me that I still need to give you a shot at the malware lab.
   ![how-models-make-predictions-continuous-threat-score]({{ '/assets/images/how-models-make-predictions-continuous-threat-score.png' | relative_url }})
 
 
-# 1-26-2020
+# 1-26-2021
 
 During last week, I wrote some more verbose guides about how to build your GitHub Pages sites locally,
 and on how to get started with blogging on your GitHub Pages sites. Both added as supplements [to the bottom of the
@@ -181,7 +181,8 @@ We had fun.
 
 We also talked about why other classes would be requiring that students install DockerHub in order to run jupyter notebooks.
 Students were not aware of the horrors of compiling certain python libraries such as, IIRC, hadoop. Docker gives a perfectly-predictable
-system environment in which to run packages. 
+system environment in which to run packages. Like a virtual environment manager for python, Docker gives a virtual environment on
+an operating-system-level scope. Lightweight virtual machines.
 
 ## Coming up next
 
@@ -189,3 +190,6 @@ I have assigned you a few more kaggle-learn python lessons to complete, and also
 I will also have you convert one of your assignments from last semester into a portfolio piece.
 
 See you soon!
+
+
+# 2-2-2021
