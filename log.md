@@ -366,3 +366,39 @@ df['new_column'].iloc[1::3] = "green" # every third row, starting with the secon
 R:
 
 idk rn
+
+# 2-16-2021
+
+[Whiteboard link](https://wbd.ms/share/v2/aHR0cHM6Ly93aGl0ZWJvYXJkLm1pY3Jvc29mdC5jb20vYXBpL3YxLjAvd2hpdGVib2FyZHMvcmVkZWVtL2Q2MzYzMDIxNzk0NTRkZmJiZmJiZTdkZGVhZmZjZGIyX0JCQTcxNzYyLTEyRTAtNDJFMS1CMzI0LTVCMTMxRjQyNEUzRA==)
+
+I created a new module on canvas called "Colab notebooks with sensitive data linked." That module has a link named
+"2-16-2021 value_counts join example" which has some of our notes from live python demo today. In that, we tinkered
+with the following:
+
+- Indexing with pandas: `.iloc` vs `.loc` vs `df[]` vs `df[[]]`
+- differences between dataframes and series, concept of classes in Python and instances of classes
+- how indeces _stick with the data_ even if you filter out rows
+- [pandas.DataFrame.join](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.join.html), diving into what a "caller" is, and on the difference between a function as an _object_ and _calling_ that function to get its return value.
+
+Requested topics:
+* jaccardian distance and its application for comparing items with large sets of both-don't-have attributes
+* calculating k-nearest-neighbors probability predictions with contributions weighted by inverse square distance. Snip from slack:
+
+  > Something I didn't make clear in class -- _all_ probability predictions for k-nearest-neighbors simply "sum" the contribution of each of the k nearest neighbors. Here's the important part: without weighting, the contribution of each neighbor is `1 / number of neighbors`. That guarantees that the contributions will add up to 1, and so you'll get nice tidy class predictions between 0 and 1
+  >
+  > like, if there were 5 neighbors, and 3 were "yes" and 2 were "no", then each of the "yes"es would contribute 1/5, and each of the "nos" would too, leaving a c=yes probability of 3/5 and a c=no probability of 2/5
+  >
+  > generally, that's the same as "dividing the contribution by the sum of the contributions," which is the same thing that the weighted inverse squared thing did
+  >
+  > because in that situation, each contributes a flat "1"
+
+We watched parts of [First place approach in Microsoft Malware Classification Challenge (BIG 2015)](https://www.youtube.com/watch?v=VLQTRlLGz5Y).
+* I had students look for the CRISP-DM format of the presentation.
+* I also emphasized how the authors did not have _any_ previous
+experience with malware analysis, so they relied in "inspiration from published works." n-grams of assembler code,
+"visualizations" made from bytes from the assembly code (what the heck?).
+* I also pointed out the crazy-high likelihood that the first place winner used an approach that had overfit to the kaggle testing data.
+  I haven't reviewed the details of the kaggle competition, but this is possible whenever there is not a final holdout against which the
+  top performing models are tested.
+
+I'm wrapping up a lab focused on hosting data in publicly accessible places, for open data science.
