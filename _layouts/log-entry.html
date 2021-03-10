@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<h3>Whiteboard</h3>
+
+{% assign whiteboard_url = '/assets/images/' | append: page.whiteboard_img %}
+<img src="{{ whiteboard_url | relative_url }}" alt="">
+
+{{ content }}
